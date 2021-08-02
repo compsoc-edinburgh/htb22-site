@@ -4,13 +4,46 @@
 
 <html>
     <head>
-        <title> htb demo </title>
+        <title>htb demo</title>
         
-        <link href="static/index.css" rel="stylesheet">
+        <style>
+            #backgroundScene {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        </style>
     </head>
     <body>
-        <canvas id="c"></canvas>
+        <canvas id="backgroundScene"></canvas>
 
-        <script src="scene.mjs" type="module"></script>
+        <script src="lib/scene.mjs" type="module"></script>
+        <script type="module">
+            import { createSceneInfo, animateSceneInfo, handleResize } from './lib/scene.mjs';
+            import * as THREE from './lib/three.module.js';
+
+            const canvas = document.getElementById('backgroundScene');
+            const renderer = new THREE.WebGLRenderer({
+                canvas
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            const sceneInfo = createSceneInfo(renderer);
+            const animate = (_step) => {
+                window.requestAnimationFrame(animate);
+
+                animateSceneInfo(sceneInfo);
+                sceneInfo.composer.render();
+            }
+
+            animate();
+
+            window.addEventListener('resize', () => {
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                handleResize(sceneInfo);
+            })
+        </script>
     </body>
 </html>
