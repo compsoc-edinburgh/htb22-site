@@ -6,6 +6,7 @@
     {% include head.html %}
 
     <body>
+        {% include navbar.html fixed=true %}
         {% include jumbotron.html %}
         {% include banner.html %}
 
@@ -25,6 +26,7 @@
 
         {% include footer.html %}
         {% include scripts.html %}
+        <script src="lib/index.mjs" type="module"></script>
         {% include mlh.html %}
     </body>
 </html>
