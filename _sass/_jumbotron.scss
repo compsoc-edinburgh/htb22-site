@@ -1,6 +1,6 @@
 @import "media";
 
-canvas#c {
+canvas#indexScene {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,62 +9,66 @@ canvas#c {
 
 
     z-index: -1;
-    opacity:  0.4;
+
     @media (prefers-reduced-motion) {
         opacity: 0;
     }
 }
 
-
-
-
 .jumbotron {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
-    > .jumbotron__logo {
-        width: 80%;
-        height: auto;
+    .jumbotron__content {
+        margin: 0 auto;
+        width: 100%;
 
         @include media-desktop {
-            width: 60%;
+            width: 30%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        >.jumbotron__logo {
+            width: 80%;
             height: auto;
         }
-    }
 
-    > .jumbotron__subtitle {
-        font-size: 1.1rem;
-        @include media-desktop {
-            font-size: 1.5rem;
-        }
-        margin: 1rem;
-    }
+        >.jumbotron__subtitle {
+            font-size: 1.1rem;
 
-    > .jumbotron__buttons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+            @include media-desktop {
+                font-size: 1.5rem;
+            }
 
-        font-size: 1.1rem;
-        @include media-desktop {
-            font-size: 1.5rem;
+            margin: 1rem;
         }
 
-        > a {
+        >.jumbotron__buttons {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            text-align: center;
 
-            margin: 0 1em;
+            font-size: 1.1rem;
 
-            > .fas {
-                margin-left: 10px;
+            @include media-desktop {
+                font-size: 1.5rem;
+            }
+
+            >a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                margin: 0 1em;
+
+                >.fas {
+                    margin-left: 10px;
+                }
             }
         }
     }
