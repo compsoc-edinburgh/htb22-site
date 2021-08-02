@@ -1,0 +1,83 @@
+@import "colors";
+
+.sponsors {
+    background-color: $sponsor__background;
+    color: black;
+
+    > h1 {
+        text-align: center;
+
+        &:first-child {
+            margin-top: 0;
+
+            padding-top: 1em;
+            @include media-desktop {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+.platinum, .gold, .silver, .bronze, .partner {
+    display: flex;
+    flex-direction: column;
+    @include media-desktop {
+        flex-direction: row;
+    }
+    align-items: center;
+    justify-content: center;
+}
+
+.platinum img {
+    width: 85vw;
+    @include media-desktop {
+        width: 50vw;
+    }
+    height: auto;
+    margin: 1em 0;
+}
+
+.gold img {
+    width: 80vw;
+    @include media-desktop {
+        width: 35vw;
+    }
+    height: auto;
+    margin: 1em 0;
+}
+
+.silver img, .bronze img {
+    width: 65vw;
+    @include media-desktop {
+        width: 35vw;
+    }
+    height: auto;
+    margin: 1em 3em;
+
+    &.silver__gresearch {
+        width: 25vw;
+        @include media-desktop {
+            width: 15vw;
+        }
+
+    }
+}
+
+
+.partner img {
+    width: 55vw;
+    @include media-desktop {
+        width: 25vw;
+    }
+    height: auto;
+    margin: 0.5em 1em;
+
+    &.partner__stickermule {
+        height: 125px;
+        width: auto;
+        @include media-desktop {
+            height: 175px;
+            width: auto;
+        }
+    }
+}

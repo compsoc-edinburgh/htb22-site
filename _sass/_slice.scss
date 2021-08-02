@@ -1,0 +1,25 @@
+@import "colors";
+
+.slice--invert {
+    > .slice > polygon {
+        fill: $sponsor__background !important;
+    }
+}
+
+.slice {
+    width: 100%;
+    display: block;
+
+    > polygon {
+        fill: $content__background;
+        stroke: none;
+    }
+
+    &__top {
+        margin-top: 2rem;
+    }
+
+    &__bottom {
+        margin-bottom: 2rem;
+    }
+}

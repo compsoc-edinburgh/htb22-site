@@ -1,0 +1,52 @@
+@import 'media';
+@import 'colors';
+
+$faq__cards-per-row: 3;
+
+.faq {
+    background-color: $content__background;
+    color: $content__text;
+}
+
+
+.faq__layout {
+    padding: 0 2px 0 2px;
+	@include media-desktop {
+		padding: 2rem 10% 0 10%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+	}
+    @include media-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        justify-content: flex-start;
+    }
+}
+
+.faq__card {
+	display: flex;
+	flex-direction: column;
+    align-items:  stretch;
+	justify-content: flex-start;
+    text-align:  center;
+
+    @include media-mobile {
+        max-width: 50ch;
+    }
+
+    > .faq__cardinfo, > .faq__cardsubtitle {
+        text-align: left;
+    }
+
+	> .faq__cardtitle {
+		font-size: 1.5em;
+		margin-bottom: 1rem;
+	}
+	> .faq__cardicon {
+		font-size: 5em;
+	}
+
+}

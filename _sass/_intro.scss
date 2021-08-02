@@ -1,0 +1,33 @@
+@import "colors";
+
+.intro-block {
+    background-color: $content__background;
+    color: $content__text;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+
+
+    > .intro-block__aside {
+        font-size: 5em;
+        padding: 50px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @include media-mobile {
+            display: none;
+        }
+
+    }
+
+    > .intro-block__main {
+        max-width: 80ch;
+    }
+}

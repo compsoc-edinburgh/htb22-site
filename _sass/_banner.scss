@@ -1,0 +1,40 @@
+@import "colors";
+
+@keyframes slidein {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: none;
+    }
+}
+
+.banner {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 10px;
+    z-index: 10;
+
+    padding: 4px;
+    
+    background-color: $text__accent;
+    color: white;
+    opacity: 0.9;
+
+    animation-delay: 1s;
+    animation-name: slidein;
+    transform: translateY(-100%);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0,0,0.3,1);
+
+    transition: opacity 0.25s cubic-bezier(0,0,0.3,1);
+
+    /*
+    &:hover {
+        color: $text__color;
+        opacity: 1;
+    }*/
+}
