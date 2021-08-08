@@ -9,10 +9,10 @@ body {
 a {
     text-decoration: none;
 
-    color: $text__color;
+    color: $text;
     transition: color 0.25s cubic-bezier(0,0,0.3,1);
 }
 
 a:hover {
-    color: $text__accent;
+    color: $text-accent;
 }

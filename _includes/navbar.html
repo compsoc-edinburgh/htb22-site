@@ -1,23 +1,23 @@
 <nav class="navbar {% if include.fixed %}navbar-fixed {% endif %}">
     <a href="/" class="logo" id="navbar-logo"><img src="static/logos/index_nav.png" alt="Logo"></a>
     <ul class="items-left">
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
+        <li><a href="#"><span>One</span></a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
     </ul>
     <div class="expand">
         <button onClick="toggleActive('#navbarPopout')">
-            ...
+            <i class="fas fa-bars" aria-label="Expand"></i>
         </button>
     </div>
     
 </nav>
 
-<nav id="navbarPopout">
+<nav id="navbarPopout" aria-role="dialog">
     <ul class="items">
-        <li onClick="toggleActive('#navbarPopout')">Close</li>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
+        <li aria-role="button" onClick="toggleActive('#navbarPopout')"><a>Close</a></li>
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
     </ul>
 </nav>
