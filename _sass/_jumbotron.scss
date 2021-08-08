@@ -1,4 +1,5 @@
 @import "media";
+@import "colors";
 
 canvas#indexScene {
     position: fixed;
@@ -33,41 +34,48 @@ canvas#indexScene {
         >.jumbotron__logo {
             width: 80%;
             height: auto;
+            margin-bottom: 1rem;
         }
 
-        >.jumbotron__subtitle {
-            font-size: 1.1rem;
+        >.jumbotron__square {
+            background: $background;
+            padding: 1rem;
+            font-family: monospace;
 
-            @include media-desktop {
-                font-size: 1.5rem;
+            >.jumbotron__subtitle {
+                text-align: center;
+                margin-bottom: 1.5rem;
+
+                font-size: 1.1rem;    
+                @include media-desktop {
+                    font-size: 1.5rem;
+                }
+    
             }
-
-            margin: 1rem;
-        }
-
-        >.jumbotron__buttons {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 1.1rem;
-
-            @include media-desktop {
-                font-size: 1.5rem;
-            }
-
-            >a {
+    
+            >.jumbotron__buttons {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
-
-                margin: 0 1em;
-
-                >.fas {
-                    margin-left: 10px;
+    
+                font-size: 1.1rem;
+                @include media-desktop {
+                    font-size: 1.5rem;
+                }
+    
+                >a {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+    
+                    margin: 0 1rem;
+    
+                    >.fas {
+                        margin-left: 10px;
+                    }
                 }
             }
         }
