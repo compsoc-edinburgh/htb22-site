@@ -14,4 +14,10 @@
     opacity: 0;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0,0,0.3,1);
+    
+}
+@include media-mobile {
+    #mlh-trust-badge {
+        display: none !important;
+    }
 }

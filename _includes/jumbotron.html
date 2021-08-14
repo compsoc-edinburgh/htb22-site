@@ -1,22 +1,24 @@
-<canvas id="c"></canvas>
-
 <div class="jumbotron">
-    <img src="/static/logos/horizontal-logo.svg" alt="htb logo" class="jumbotron__logo">
-    <div class="jumbotron__subtitle">
-        March 6<sup>th</sup> to March 7<sup>th</sup>, 2021 &bull; Online
+    <div class="jumbotron__content">
+        <canvas class="jumbotron__logo" id="jumbotron-logo" width="100" height="100"></canvas>
+        <div class="jumbotron__square">
+            <div class="jumbotron__subtitle">
+                November 2021 &bull; In person & Online
+            </div>
+            <div class="jumbotron__buttons">
+                <a href="{{ site.links.register }}">
+                    register
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="{{ site.links.volunteer }}">
+                    volunteer
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="jumbotron__buttons">
-        <a href="{{ site.links.register }}">
-            register
-            <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="{{ site.links.volunteer }}">
-            sign up to volunteer
-            <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-    
 </div>
 
+</div>
 
-
+<canvas id="indexScene"></canvas>

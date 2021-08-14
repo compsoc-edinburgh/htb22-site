@@ -1,0 +1,115 @@
+@import "media";
+
+.navbar {
+    display: flex;
+    background: $background;
+
+    height: 5rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1rem 1rem;
+
+    .logo {
+        height: 100%;
+        opacity: 0; /* Hidden until the end of the scroll animation */
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .items-left {
+        list-style-type: none;
+
+        height: 100%;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            height: 100%;
+            
+            a {
+                box-sizing: border-box;
+                padding: 0 2rem;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+    .expand {
+        /* Hack to display at end */
+        flex-grow: 2;
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            background: $primary;
+            padding: 0.5rem;
+            border: none;
+            color: $text-inverse;
+        }
+    }
+}
+
+.navbar.navbar-fixed {
+    position: fixed;
+}
+
+#navbarPopout {
+    background: $primary-darker;
+
+    position: fixed;
+    width: 100%;
+    top: -100%; /* This is too much, but it will be overriden by common.js */
+    transition: top 0.2s ease-in; /* Used for going out */
+    opacity: 0;
+
+    .items {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            display: block;
+
+            a,span {
+                padding: 1rem 1rem;
+                width: 100%;
+                box-sizing: border-box;
+
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#navbarPopout.active {
+    top: 0 !important;
+    transition: top 0.2s ease-out; /* Used for coming in */
+}
+
+
+@include media-desktop {
+    .navbar .expand {
+        display: none;
+    }
+}
+
+
+@include media-mobile {
+    .navbar .items-left {
+        display: none;
+    }
+}

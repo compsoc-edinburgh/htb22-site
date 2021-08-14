@@ -6,8 +6,8 @@
     {% include head.html %}
 
     <body>
+        {% include navbar.html fixed=true %}
         {% include jumbotron.html %}
-        {% include banner.html %}
 
         {% include components/slice_top.html %}
         {% include intro.html %}
@@ -25,6 +25,7 @@
 
         {% include footer.html %}
         {% include scripts.html %}
+        <script src="lib/index.mjs" type="module"></script>
         {% include mlh.html %}
     </body>
 </html>
