@@ -9,31 +9,31 @@
 	font-size: 0.8em;
 	color: $content__text;
 	background-color: $content__background;
-	
+
 	display: flex;
 	flex-direction: column;
+
 	@include media-desktop {
 		flex-direction: row;
 	}
 
 	align-items: center;
 	justify-content: space-between;
-
-    margin-top: 25vh;
 }
 
 .footer-left {
-    > a {
-        color: $content__text;
-    }
-	> a > .heart {
+	>a {
+		color: $content__text;
+	}
+
+	>a>.heart {
 		color: white;
-		transition: color 0.2s cubic-bezier(0,0,0.3,1);
-        transform-origin: 50% 50%;
+		transition: color 0.2s cubic-bezier(0, 0, 0.3, 1);
+		transform-origin: 50% 50%;
 	}
 
 	&:hover {
-		> a > .heart {
+		>a>.heart {
 			color: #d50012 !important;
 		}
 	}

@@ -4,13 +4,24 @@
     background-color: $sponsor__background;
     color: black;
 
-    > h1 {
-        text-align: center;
+    padding-bottom: 5rem;
+
+    text-align: center;
+
+    >h1 {
+        border-bottom: 3px solid black;
+        padding: 0 0.2rem;
+        box-sizing: border-box;
+        display: inline;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
 
         &:first-child {
             margin-top: 0;
 
             padding-top: 1em;
+
             @include media-desktop {
                 padding-top: 0;
             }
@@ -18,66 +29,63 @@
     }
 }
 
-.platinum, .gold, .silver, .bronze, .partner {
+
+.platinum,
+.gold,
+.silver,
+.bronze,
+.partner {
     display: flex;
     flex-direction: column;
+    padding-top: 3rem;
+
     @include media-desktop {
         flex-direction: row;
+        flex-wrap: wrap;
     }
+
     align-items: center;
     justify-content: center;
-}
 
-.platinum img {
-    width: 85vw;
-    @include media-desktop {
-        width: 50vw;
-    }
-    height: auto;
-    margin: 1em 0;
-}
+    a {
+        width: 75%;
 
-.gold img {
-    width: 80vw;
-    @include media-desktop {
-        width: 35vw;
-    }
-    height: auto;
-    margin: 1em 0;
-}
-
-.silver img, .bronze img {
-    width: 65vw;
-    @include media-desktop {
-        width: 35vw;
-    }
-    height: auto;
-    margin: 1em 3em;
-
-    &.silver__gresearch {
-        width: 25vw;
-        @include media-desktop {
-            width: 15vw;
+        img {
+            width: 100%;
         }
 
+        margin: 0 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@include media-desktop {
+    .platinum a {
+        width: 40%;
+    }
+
+    .gold a {
+        width: 25%;
+    }
+
+    .partner a {
+        width: 20%;
     }
 }
 
 
-.partner img {
-    width: 55vw;
-    @include media-desktop {
-        width: 25vw;
-    }
-    height: auto;
-    margin: 0.5em 1em;
 
-    &.partner__stickermule {
-        height: 125px;
-        width: auto;
+.silver a,
+.bronze a {
+    @include media-desktop {
+        width: 20%;
+    }
+
+    &.silver__gresearch {
+        width: 25%;
+
         @include media-desktop {
-            height: 175px;
-            width: auto;
+            width: 7%;
         }
     }
 }
