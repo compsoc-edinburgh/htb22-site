@@ -1,25 +1,29 @@
 @import "colors";
 
-.slice--invert {
-    > .slice > polygon {
-        fill: $sponsor__background !important;
-    }
+.slice--invert .slice {
+    background: $sponsor__background !important;
 }
 
 .slice {
     width: 100%;
+    height: 10rem;
     display: block;
 
-    > polygon {
-        fill: $content__background;
-        stroke: none;
-    }
+    background: $content__background;
+
+    /* TODO: Not sure why this is needed, but it goes over the navbar if it's not here */
+    position: relative;
+    z-index: -1;
 
     &__top {
         margin-top: 2rem;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+        /* Bottom left to top right */
     }
 
     &__bottom {
         margin-bottom: 2rem;
+        clip-path: polygon(100% 0%, 0% 0%, 0% 100%);
+        /* Bottom right to top left */
     }
 }
