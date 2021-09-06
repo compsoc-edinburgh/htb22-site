@@ -9,13 +9,10 @@
     text-align: center;
 
     >h1 {
-        border-bottom: 3px solid black;
+        border-bottom: 1px solid black;
         padding: 0 0.2rem;
         box-sizing: border-box;
         display: inline;
-        margin: 0 auto;
-        text-transform: uppercase;
-        font-family: 'Oswald', sans-serif;
 
         &:first-child {
             margin-top: 0;
@@ -25,6 +22,29 @@
             @include media-desktop {
                 padding-top: 0;
             }
+        }
+    }
+
+
+    .sponsors__title {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+
+        >h1 {
+            display: inline;
+
+            font-size: 3rem;
+            border-bottom: 7px solid black;
+
+            @include media-desktop {
+                border-bottom: 10px solid black;
+                font-size: 8rem;
+            }
+
+            text-transform: uppercase;
+            font-family: 'DejaVu Sans Mono',
+            monospace,
+            sans-serif;
         }
     }
 }
