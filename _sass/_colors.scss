@@ -1,9 +1,3 @@
-$text__color: white;
-$text__accent: rgb(218, 55, 50);
-$content__background: rgba(30, 17, 16, 1);
-$content__text: #eee;
-$sponsor__background: #FFFFFF;
-
 $text: white;
 $text-accent: #45C4FF;
 $text-inverse: black;
@@ -15,3 +9,9 @@ $primary-lighter: #45C4FF;
 $accent: #B06000;
 $accent-lighter: #FC9D2B;
 $background: #000000;
+
+$text__color: white;
+$text__accent:$accent-lighter;
+$content__background: $primary-darker;
+$content__text: $text;
+$sponsor__background: #FFFFFF;

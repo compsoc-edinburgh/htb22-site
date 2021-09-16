@@ -1,13 +1,12 @@
 @import 'media';
 @import 'colors';
 
-
-
 .footer {
 	padding: 20px 40px 20px 40px;
 
 	font-size: 0.8em;
 	color: $content__text;
+	font-weight: bold;
 	background-color: $content__background;
 
 	display: flex;
