@@ -1,6 +1,5 @@
 $text__color: white;
 $text__accent: rgb(218, 55, 50);
-$content__background: rgba(30, 17, 16, 1);
 $content__text: #eee;
 $sponsor__background: #FFFFFF;
 //$sponsor__background: #F8F2F2;
@@ -17,3 +16,4 @@ $primary-lighter: #45C4FF;
 $accent: #B06000;
 $accent-lighter: #FC9D2B;
 $background: #000000;
+$content__background: $primary-darker;
