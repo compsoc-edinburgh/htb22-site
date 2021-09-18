@@ -1,6 +1,6 @@
 .location {
     display: grid;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
     grid-template-columns: 1fr;
@@ -15,7 +15,9 @@
     }
 
     .directions {
-        padding: 0 2rem;
+        @include media-desktop {
+            padding: 0 2rem;
+        }
     }
 
     h1 {
