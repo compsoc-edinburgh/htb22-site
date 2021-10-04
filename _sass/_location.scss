@@ -1,0 +1,39 @@
+.location {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+
+    @include media-desktop {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .directions {
+        @include media-desktop {
+            padding: 0 2rem;
+        }
+    }
+
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 3rem;
+        margin: 0.1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+
+    h1,
+    h2 {
+        color: $text-accent;
+    }
+
+}

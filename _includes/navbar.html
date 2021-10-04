@@ -1,9 +1,12 @@
 <nav class="navbar {% if include.fixed %}navbar-fixed {% endif %}">
     <a href="/" class="logo" id="navbar-logo"><img src="static/logos/index_nav.png" alt="Logo"></a>
     <ul class="items-left">
-        <li><a href="#"><span>One</span></a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/location.html">Location</a></li>
+        <li><a href="#">Past Projects</a></li>
+        <li><a href="#">Travel reimbursements</a></li>
+        <li><a href="https://twitter.com/hacktheburgh"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://instagram.com/hacktheburgh"><i class="fab fa-instagram"></i></a></li>
     </ul>
     <div class="expand">
         <button onClick="toggleActive('#navbarPopout')">
@@ -16,8 +19,11 @@
 <nav id="navbarPopout" aria-role="dialog">
     <ul class="items">
         <li aria-role="button" onClick="toggleActive('#navbarPopout')"><a>Close</a></li>
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/location.html">Location</a></li>
+        <li><a href="#">Past Projects</a></li>
+        <li><a href="#">Travel reimbursements</a></li>
+        <li><a href="https://twitter.com/hacktheburgh">Twitter</a></li>
+        <li><a href="https://instagram.com/hacktheburgh">Instagram</a></li>
     </ul>
 </nav>
