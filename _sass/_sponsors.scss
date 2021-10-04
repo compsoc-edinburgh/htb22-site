@@ -1,83 +1,98 @@
 @import "colors";
 
 .sponsors {
-    background-color: $sponsor__background;
     color: black;
 
-    > h1 {
+    >div {
+        margin: 4rem auto;
+        padding: 2rem;
+
+        @include media-desktop {
+            width: 80%;
+        }
+
+        // Backgrounds defined below
         text-align: center;
 
-        &:first-child {
-            margin-top: 0;
+        h1 {
+            font-family: monospace;
+            font-size: 1.3rem;
 
-            padding-top: 1em;
             @include media-desktop {
-                padding-top: 0;
+                font-size: 2rem;
+            }
+        }
+
+        .items {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+
+            grid-column-gap: 2rem;
+            grid-row-gap: 3rem;
+
+            // 1 column on mobile, Other grids defined below
+            grid-template-columns: 70%;
+
+            // Fix so images pay attention to grid
+            a img {
+                width: 100%;
             }
         }
     }
 }
 
-.platinum, .gold, .silver, .bronze, .partner {
-    display: flex;
-    flex-direction: column;
-    @include media-desktop {
-        flex-direction: row;
+// Desktop grid definitions
+@include media-desktop {
+    .platinum .items {
+        grid-template-columns: 40% !important;
     }
-    align-items: center;
-    justify-content: center;
-}
 
-.platinum img {
-    width: 85vw;
-    @include media-desktop {
-        width: 50vw;
+    .gold .items {
+        grid-template-columns: 25% !important;
     }
-    height: auto;
-    margin: 1em 0;
-}
 
-.gold img {
-    width: 80vw;
-    @include media-desktop {
-        width: 35vw;
+    .silver .items {
+        grid-template-columns: 20% 20% !important;
     }
-    height: auto;
-    margin: 1em 0;
-}
 
-.silver img, .bronze img {
-    width: 65vw;
-    @include media-desktop {
-        width: 35vw;
+    .bronze .items {
+        grid-template-columns: 20% !important;
     }
-    height: auto;
-    margin: 1em 3em;
 
-    &.silver__gresearch {
-        width: 25vw;
-        @include media-desktop {
-            width: 15vw;
-        }
-
+    .partner .items {
+        grid-template-columns: 20% 20% 20% !important;
     }
 }
 
+// Background definitions
+.platinum {
+    background: #ffffffff;
+}
 
-.partner img {
-    width: 55vw;
-    @include media-desktop {
-        width: 25vw;
-    }
-    height: auto;
-    margin: 0.5em 1em;
+.gold {
+    background: darken($sponsor__background, 5);
+}
 
-    &.partner__stickermule {
-        height: 125px;
-        width: auto;
-        @include media-desktop {
-            height: 175px;
-            width: auto;
-        }
-    }
+.silver {
+    background: darken($sponsor__background, 10);
+}
+
+.bronze {
+    background: darken($sponsor__background, 15);
+}
+
+.partner {
+    background: darken($sponsor__background, 20);
+}
+
+// Fixes for specific logos
+.silver__gresearch {
+    width: 40% !important;
+    margin: 0 auto;
+}
+
+.hackuk img {
+    margin-bottom: -15px;
 }
