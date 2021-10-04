@@ -12,7 +12,8 @@
 
     .logo {
         height: 100%;
-        opacity: 0; /* Hidden until the end of the scroll animation */
+        opacity: 0;
+        /* Hidden until the end of the scroll animation */
 
         img {
             height: 100%;
@@ -30,15 +31,16 @@
         li {
             display: inline-block;
             height: 100%;
-            
+
             a {
                 box-sizing: border-box;
                 padding: 0 2rem;
                 height: 100%;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                color: $text;
             }
         }
     }
@@ -69,8 +71,10 @@
 
     position: fixed;
     width: 100%;
-    top: -100%; /* This is too much, but it will be overriden by common.js */
-    transition: top 0.2s ease-in; /* Used for going out */
+    top: -100%;
+    /* This is too much, but it will be overriden by common.js */
+    transition: top 0.2s ease-in;
+    /* Used for going out */
     opacity: 0;
 
     .items {
@@ -81,11 +85,13 @@
         li {
             display: block;
 
-            a,span {
+            a,
+            span {
                 padding: 1rem 1rem;
                 width: 100%;
                 box-sizing: border-box;
 
+                color: $text;
                 display: flex;
                 flex-direction: column;
                 align-content: center;
@@ -97,7 +103,8 @@
 
 #navbarPopout.active {
     top: 0 !important;
-    transition: top 0.2s ease-out; /* Used for coming in */
+    transition: top 0.2s ease-out;
+    /* Used for coming in */
 }
 
 
