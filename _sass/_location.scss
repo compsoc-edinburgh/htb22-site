@@ -1,8 +1,8 @@
 .location {
     display: grid;
-    width: 90%;
+    background: $content__background;
     margin: 0 auto;
-    margin-top: 2rem;
+    padding: 0 10%;
     grid-template-columns: 1fr;
 
     @include media-desktop {
@@ -29,11 +29,6 @@
     h2 {
         font-size: 1rem;
         font-weight: bolder;
-    }
-
-    h1,
-    h2 {
-        color: $text-accent;
     }
 
 }
