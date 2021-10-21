@@ -39,44 +39,50 @@ canvas#indexScene {
 
         >.jumbotron__square {
             background: $background;
-            padding: 1rem;
             font-family: monospace;
 
             >.jumbotron__subtitle {
                 text-align: center;
+                margin: 1rem;
                 margin-bottom: 1.5rem;
 
-                font-size: 1.1rem;    
-                @include media-desktop {
-                    font-size: 1.5rem;
-                }
-    
-            }
-    
-            >.jumbotron__buttons {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-    
                 font-size: 1.1rem;
+
                 @include media-desktop {
                     font-size: 1.5rem;
                 }
-    
+
+            }
+
+            >.jumbotron__buttons,
+            .jumbotron__socials {
+                display: flex;
+
                 >a {
+                    flex-basis: 50%;
+
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
                     justify-content: center;
-                    text-align: center;
-    
-                    margin: 0 1rem;
-    
-                    >.fas {
-                        margin-left: 10px;
+
+                    background: $primary-darker;
+                    color: $text;
+
+                    padding: 0.7rem;
+
+                    font-size: 1.4rem;
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+
+                    border-top: 1px solid black;
+                    border-right: 1px solid black;
+
+                    >a:last-child {
+                        border: 0 !important;
                     }
                 }
+
             }
         }
     }
