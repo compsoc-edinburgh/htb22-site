@@ -18,12 +18,13 @@
 
 	align-items: center;
 	justify-content: space-between;
+
+	a {
+		color: $content__text;
+	}
 }
 
 .footer-left {
-	>a {
-		color: $content__text;
-	}
 
 	>a>.heart {
 		color: white;
