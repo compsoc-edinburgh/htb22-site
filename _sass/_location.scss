@@ -35,12 +35,15 @@
 
 .reimbursements {
     background: $content__background;
-    padding: 10vh 0;
+    padding: 10vh 10vw;
 
     text-align: center;
 
     table {
-        width: 40%;
+        @include media-desktop {
+            width: 40%;
+        }
+
         margin: 0 auto;
         margin-top: 6vh;
         text-align: left;
