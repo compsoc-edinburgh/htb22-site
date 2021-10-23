@@ -1,0 +1,29 @@
+.projects {
+    background: $content__background;
+
+    @include media-desktop {
+        width: 50%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 5rem 5vw !important;
+    }
+
+    margin: 20vh 0;
+    padding: 5rem 0;
+    text-align: center;
+
+    >h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .project {
+        img {
+            width: 100%;
+        }
+        width: 65%;
+        margin: 0 auto;
+    }
+}
