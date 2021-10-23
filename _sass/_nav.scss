@@ -2,7 +2,12 @@
 
 .navbar {
     display: flex;
-    background: $background;
+
+    &.withBg {
+        background: $background;
+    }
+
+    transition: background-color ease-in 0.1s;
 
     height: 5rem;
     width: 100%;
