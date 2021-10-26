@@ -81,6 +81,12 @@ canvas#indexScene {
                     >a:last-child {
                         border: 0 !important;
                     }
+
+                    transition: background-color linear 0.1s;
+
+                    &:hover {
+                        background: darken($primary-darker, 25);
+                    }
                 }
 
             }
