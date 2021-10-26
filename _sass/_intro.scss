@@ -6,23 +6,21 @@
 
     display: grid;
     grid-template-columns: 1fr;
+
     @include media-desktop {
-        grid-template-columns: 3fr 3fr;
+        grid-template-columns: 45% 50%;
     }
-    
+
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
     padding: 2rem 4rem;
 
-    > .intro-block__aside {
-        justify-self: center;
+    >.intro-block__main {
+        justify-self: start;
+
         img {
             width: 100%;
         }
-    }
-
-    > .intro-block__main {
-        justify-self: start;
 
         h1 {
             margin: 0;
