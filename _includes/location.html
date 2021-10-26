@@ -1,3 +1,4 @@
+{% include components/slice_top.html %}
 <div class="location">
     <div class="map">
         <iframe style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Informatics%20Forum&key=AIzaSyBhIxBaDkbSSogpJ9D-zVPLmt64p_M-5I0"></iframe> 
@@ -19,7 +20,8 @@
         <!-- TODO: Stuff for online attendees? If we're streaming things, etc. -->
     </div>
 </div>
-
+{% include components/slice_bottom.html %}
+{% include components/slice_top.html %}
 <div class="reimbursements">
     <h1>Travel Reimbursements</h1>
     <p>If you are arriving from outside of Edinburgh, we may able to reimburse your travel. Please not that reimbursements are not guaranteed.</p>
@@ -47,3 +49,4 @@
         </tbody>
     </table>
 </div>
+{% include components/slice_bottom.html %}
