@@ -1,36 +1,43 @@
 .numbers {
-    width: 100%;
-    display: grid;
-    background: $content__background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    grid-template-columns: 1fr;
+    justify-self: center;
+
     @include media-desktop {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 2rem;
+        justify-self: end;
     }
 
     .number-container {
         display: grid;
-        grid-template-columns: 1fr;
-        @include media-desktop {
-            grid-template-columns: 1fr 1fr;
-        }
-        grid-column-gap: .5rem;
-        flex-direction: row;
+
+        grid-template-columns: auto;
         justify-content: center;
+
+        @include media-desktop {
+            grid-template-columns: auto auto;
+            justify-content: end;
+        }
+
+        grid-column-gap: 2rem;
         align-items: center;
+
         .number {
             font-family: 'Oswald', sans-serif;
             font-weight: bold;
             color: $primary-lighter;
-            
+            text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
             font-size: 7rem;
             justify-self: center;
+
             @include media-desktop {
-                font-size: 10.5vw;
+                font-size: 9.5vw;
                 justify-self: end;
             }
         }
+
         .number-caption {
             font-family: 'Oswald', sans-serif;
             font-weight: bold;
@@ -38,6 +45,7 @@
 
             font-size: 2.5rem;
             justify-self: center;
+
             @include media-desktop {
                 font-size: 4.5vw;
                 justify-self: start;
