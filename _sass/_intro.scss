@@ -4,30 +4,26 @@
     background-color: $content__background;
     color: $content__text;
 
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
 
-    padding: 1rem 2rem;
-
-
-    > .intro-block__aside {
-        font-size: 5em;
-        padding: 50px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        @include media-mobile {
-            display: none;
-        }
-
+    @include media-desktop {
+        grid-template-columns: 45% 50%;
     }
 
-    > .intro-block__main {
-        max-width: 80ch;
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    padding: 2rem 4rem;
+
+    >.intro-block__main {
+        justify-self: start;
+
+        img {
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
     }
 }

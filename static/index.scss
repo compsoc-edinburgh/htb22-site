@@ -6,6 +6,10 @@ body {
     background-color: black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @import "jumbotron";
 @import "typography";
 @import "slice";
@@ -17,3 +21,6 @@ body {
 @import "footer";
 @import "nav";
 @import "location";
+@import "numbers";
+@import "projects";
+@import "events";

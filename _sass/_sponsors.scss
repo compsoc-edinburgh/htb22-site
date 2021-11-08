@@ -2,10 +2,17 @@
 
 .sponsors {
     color: black;
+    background: white;
+    margin-top: 40vh;
+    padding: 3rem 0;
+
+    hr {
+        width: 20%;
+        margin: 3rem auto;
+    }
 
     >div {
-        margin: 4rem auto;
-        padding: 2rem;
+        margin: 0 auto;
 
         @include media-desktop {
             width: 80%;
@@ -29,6 +36,7 @@
             justify-content: center;
             align-content: center;
 
+            margin-top: 2rem;
             grid-column-gap: 2rem;
             grid-row-gap: 3rem;
 
@@ -64,27 +72,6 @@
     .partner .items {
         grid-template-columns: 20% 20% 20% !important;
     }
-}
-
-// Background definitions
-.platinum {
-    background: #ffffffff;
-}
-
-.gold {
-    background: darken($sponsor__background, 5);
-}
-
-.silver {
-    background: darken($sponsor__background, 10);
-}
-
-.bronze {
-    background: darken($sponsor__background, 15);
-}
-
-.partner {
-    background: darken($sponsor__background, 20);
 }
 
 // Fixes for specific logos

@@ -1,8 +1,8 @@
 .location {
     display: grid;
-    width: 90%;
+    background: $content__background;
     margin: 0 auto;
-    margin-top: 2rem;
+    padding: 0 10%;
     grid-template-columns: 1fr;
 
     @include media-desktop {
@@ -31,9 +31,40 @@
         font-weight: bolder;
     }
 
-    h1,
-    h2 {
-        color: $text-accent;
-    }
+}
 
+.reimbursements {
+    background: $content__background;
+    padding: 10vh 10vw;
+
+    text-align: center;
+
+    table {
+        @include media-desktop {
+            width: 40%;
+        }
+
+        margin: 0 auto;
+        margin-top: 6vh;
+        text-align: left;
+        border-collapse: collapse;
+
+        thead {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        td:first-child {
+            font-weight: bold;
+        }
+
+        td {
+            padding: 0.4rem 1rem;
+        }
+    }
+}
+
+#jump-location {
+    height: 2rem;
+    width: 100%;
 }

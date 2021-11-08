@@ -2,7 +2,12 @@
 
 .navbar {
     display: flex;
-    background: $background;
+
+    &.withBg {
+        background: $background;
+    }
+
+    transition: background-color ease-in 0.1s;
 
     height: 5rem;
     width: 100%;
@@ -64,6 +69,7 @@
 
 .navbar.navbar-fixed {
     position: fixed;
+    z-index: 9999;
 }
 
 #navbarPopout {
