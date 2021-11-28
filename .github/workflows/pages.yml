@@ -32,8 +32,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Minified JS
         run: |
-          chown -R $USER build/
-          chmod -R 755 build/
+          sudo chown -R $USER build/
+          sudo chmod -R 755 build/
           "./node_modules/.bin/rollup lib/index.mjs --format iife --file build/lib/index.min.js -p rollup-plugin-terser"
       #- name: Add CNAME file
       #  run: echo "2021.hacktheburgh.com" > build/CNAME
