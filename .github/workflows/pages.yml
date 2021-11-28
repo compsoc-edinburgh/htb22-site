@@ -31,12 +31,14 @@ jobs:
           build_only: true
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Minified JS
-        run: "./node_modules/.bin/rollup lib/index.mjs --format iife --file _site/lib/index.min.js -p rollup-plugin-terser"
+        run: "./node_modules/.bin/rollup lib/index.mjs --format iife --file build/lib/index.min.js -p rollup-plugin-terser"
       #- name: Add CNAME file
-      #  run: echo "2021.hacktheburgh.com" > _site/CNAME
+      #  run: echo "2021.hacktheburgh.com" > build/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./build
           publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
