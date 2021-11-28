@@ -1,0 +1,27 @@
+{
+  "name": "htb22-site",
+  "version": "1.0.0",
+  "description": "This is the website for HTB 2022.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollupProduction": "rollup lib/index.mjs --format iife --file build/lib/index.min.js -p rollup-plugin-terser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compsoc-edinburgh/htb22-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/compsoc-edinburgh/htb22-site/issues"
+  },
+  "homepage": "https://github.com/compsoc-edinburgh/htb22-site#readme",
+  "dependencies": {
+    "rollup": "^2.60.1",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

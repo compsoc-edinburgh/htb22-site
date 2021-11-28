@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- please don't use IE -->
+
+	<meta name="theme-color" content="#272A2B">
+
+    <!-- facebook/opengraph -->
+    <meta property="og:url" content="https://2021.hacktheburgh.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hack the Burgh 2021">
+    <meta property="og:description" content="The hackathon from beyond the wall is back for a virtual hackathon!">
+    <meta property="og:image" content="https://2021.hacktheburgh.com/static/logos/preview.png">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="2021.hacktheburgh.com">
+    <meta property="twitter:url" content="https://2021.hacktheburgh.com">
+    <meta name="twitter:title" content="Hack the Burgh 2021">
+    <meta name="twitter:description" content="The hackathon from beyond the wall is back for a virtual hackathon!">
+    <meta name="twitter:image" content="https://2021.hacktheburgh.com/static/logos/preview.png">
+
+	<title>Hack the Burgh 2021</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+	<meta name="description" content="The hackathon from beyond the wall is back for a virtual hackathon!"/>
+	<link rel="stylesheet" href="static/index.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css" integrity="sha256-Ev8y2mML/gGa4LFVZgNpMTjKwj34q4pC4DcseWeRb9w=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css" integrity="sha256-sw/JiPOV1ZfcXjqBJT1vqaA4vBGeiqn+b7PDhVv4OA4=" crossorigin="anonymous">
+	<link rel="icon" href="/static/logos/favicon.png" type="image/png">
+</head>
+
+
+
+    <body>
+        <nav class="navbar navbar-fixed ">
+    <a href="/" class="logo" id="navbar-logo"><img src="static/logos/index_nav.png" alt="Logo"></a>
+    <ul class="items-left">
+        <li><a href="#jumbotron">About</a></li>
+        <li><a href="#jump-past-projects">Past Projects</a></li>
+        <li><a href="#jump-location">Travel & Reimbursements</a></li>
+        <li><a href="#jump-sponsors">Sponsors</a></li>
+        <li><a target="_blank" href="https://www.facebook.com/hacktheburgh"><i class="fab fa-facebook"></i></a></li>
+        <li><a target="_blank" href="https://www.youtube.com/channel/UCQKvr90vGzbgteMeM1A9nxQ"><i class="fab fa-youtube"></i></a></li>
+        <li><a target="_blank" href="https://twitter.com/hacktheburgh"><i class="fab fa-twitter"></i></a></li>
+        <li><a target="_blank" href="https://instagram.com/hacktheburgh"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    <div class="expand">
+        <button onClick="toggleActive('#navbarPopout')">
+            <i class="fas fa-bars" aria-label="Expand"></i>
+        </button>
+    </div>
+    
+</nav>
+
+<nav id="navbarPopout" aria-role="dialog">
+    <ul class="items">
+        <li aria-role="button" onClick="toggleActive('#navbarPopout')"><a>Close</a></li>
+        <li><a href="#jumbotron">About</a></li>
+        <li><a href="#jump-past-projects">Past Projects</a></li>
+        <li><a href="#jump-location">Location</a></li>
+        <li><a href="#jump-travel-reimbursements">Travel reimbursements</a></li>
+        <li><a target="_blank" href="https://www.facebook.com/hacktheburgh">Facebook</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/channel/UCQKvr90vGzbgteMeM1A9nxQ">Youtube</a></li>
+        <li><a target="_blank" href="https://twitter.com/hacktheburgh">Twitter</a></li>
+        <li><a target="_blank" href="https://instagram.com/hacktheburgh">Instagram</a></li>
+    </ul>
+</nav>
+        <div class="jumbotron" id="jumbotron">
+    <div class="jumbotron__content">
+        <canvas class="jumbotron__logo" id="jumbotron-logo" width="100" height="100"></canvas>
+        <div class="jumbotron__square">
+            <div class="jumbotron__subtitle">
+                February 2022 &bull; In person & Online
+            </div>
+            <div class="jumbotron__buttons">
+                <a href="https://register.2021.hacktheburgh.com">
+                    register
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSejEqfQm5gJX3yWjNBFo1M_rRbnZ13E4B4WFwoe-gsMkZG97A/viewform?usp=sf_link">
+                    volunteer
+                </a>
+            </div>
+            <div class="jumbotron__socials">
+                <!-- TODO: Add youtube -->
+                <a target="_blank" href="https://www.facebook.com/hacktheburgh"><i role="img" aria-label="Facebook" class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCQKvr90vGzbgteMeM1A9nxQ"><i role="img" aria-label="Facebook" class="fab fa-youtube"></i></a>
+                <a target="_blank" href="https://twitter.com/hacktheburgh"><i role="img" aria-label="Twitter" class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://instagram.com/hacktheburgh"><i role="img" aria-label="Instagram" class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<canvas id="indexScene"></canvas>
+
+        <div class="slice slice__top">
+</div>
+
+        <div class="numbers">
+    <div class="number-container">
+        <span class="number countUp" data-countup-target="6">0</span>
+        <span class="number-caption">years</span>
+    </div>
+    <div class="number-container">
+        <span class="number countUp" data-countup-target="200" data-countup-suffix="+">0+</span>
+        <span class="number-caption">students</span>
+    </div>
+    <div class="number-container">
+        <span class="number countUp" data-countup-target="50" data-countup-suffix="+">0+</span>
+        <span class="number-caption">teams</span>
+    </div>
+</div>
+        <div class="slice slice__bottom">
+</div>
+
+
+        <div class="slice slice__top">
+</div>
+
+        <section class="faq">
+	<p class="explanation">
+		Hack the Burgh is a yearly hackathon hosted by University of Edinburgh students.
+		It's open to all students, and is a great place to learn or practice programming, with a variety of challenges and talks from our sponsors.
+	</p>
+	<div class="faq__layout">
+        
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-money-bill-wave"></i>
+			<h5 class="faq__cardtitle">How much does it cost?</h5>
+			<b class="faq__cardsubtitle">If accepted to the event, tickets are free.</b>
+			<p class="faq__cardinfo">We also offer travel reimbursements. <!-- TODO: Add link --></p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-door-open"></i>
+			<h5 class="faq__cardtitle">Who may attend?</h5>
+			<b class="faq__cardsubtitle">Any student currently enrolled in full-time further education may join. If you graduated less than a year ago, you're also eligible.</b>
+			<p class="faq__cardinfo">Unfortunately, you can't participate if you're under 18.</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-code"></i>
+			<h5 class="faq__cardtitle">I can't code, can I join?</h5>
+			<b class="faq__cardsubtitle">Yes! If you're new to programming, a hackathon is the best place for you to go to.</b>
+			<p class="faq__cardinfo">There'll be plenty of mentors ready to assist you with whatever problem you face.<br/>Don't hestitate to ask for help, we don't bite!</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-users"></i>
+			<h5 class="faq__cardtitle">What about teams?</h5>
+			<b class="faq__cardsubtitle">You can team up with up to three other people. Teams exceeding four people aren't eligible for prizes.</b>
+			<p class="faq__cardinfo">Don't worry if you haven't got a team &mdash; you're not alone. We'll help you form a team at the event, or you can hack solo!</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-shield-alt"></i>
+			<h5 class="faq__cardtitle">What are the rules?</h5>
+			<b class="faq__cardsubtitle">Our <a href="//mlh.io/code-of-conduct">Code of Conduct</a> lives here.</b>
+			<p class="faq__cardinfo">To participate, you need to agree to follow all of the rules listed. This is so we can create a safe and welcoming environment for everyone.</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-university"></i>
+			<h5 class="faq__cardtitle">What if I'm not a student?</h5>
+			<b class="faq__cardsubtitle">We'd love to have you as a mentor!</b>
+			<p class="faq__cardinfo">Please <a href="https://docs.google.com/forms/d/e/1FAIpQLSejEqfQm5gJX3yWjNBFo1M_rRbnZ13E4B4WFwoe-gsMkZG97A/viewform?usp=sf_link">get in touch</a> for more information.</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-suitcase"></i>
+			<h5 class="faq__cardtitle">What do I bring?</h5>
+			<b class="faq__cardsubtitle">Yourself, and something to hack on.</b>
+			<p class="faq__cardinfo">We'll be providing snacks and drinks throughout the weekend, but you need to bring your own device (and charger).</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-clock"></i>
+			<h5 class="faq__cardtitle">Do I need a hotel?</h5>
+			<!-- TODO: TBC -->
+			<b class="faq__cardsubtitle">You can sleep over if you'd like.</b>
+			<p class="faq__cardinfo">You'll probably want to bring a sleeping bag and some spare clothes. Unfortunately, we don't have showers.</p>
+		</div>
+		<div class="faq__card">
+			<i class="faq__cardicon fas fa-head-side-mask"></i>
+			<h5 class="faq__cardtitle">What will in-person be like?</h5>
+			<b class="faq__cardsubtitle">We're still waiting to hear, but we'll be following government guidance throughout.</b>
+			<!-- TODO: TBC -->
+			<p class="faq__cardinfo">As we're in Scotland, you'll likely need to wear a mask at talks (unless exempt), and may be required to present proof of vaccination. We'll update you closer to the time with more details.</p>
+		</div>
+	</div>
+</section>
+
+        <div class="slice slice__bottom">
+</div>
+
+
+        <div id="jump-past-projects"></div>
+<div class="projects">
+    <h1>Past Projects</h1>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="project">
+                        <img src="static/projects/pixeleconomy.png" alt="Pixel Economy" class="project__img">
+                        <h2><a href="https://devpost.com/software/pixeleconomy">Pixel Economy</a></h2>
+                        <p>
+                            PixelEconomy is an online, virtual marketplace for creating, selling and buying pixel art that makes learning the fundamentals of trading fun and accessible.
+                            <br>
+                            Best of Show in 2020.
+                        </p>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="project">
+                        <img src="static/projects/bread.png" alt="Is it bread?" class="project__img">
+                        <h2><a href="https://devpost.com/software/is-it-bread">Is it bread?</a></h2>
+                        <p>
+                            Have you ever looked at an item and thought, "Is that bread?". Can you really trust yourself to make that judgement? Fear not, we have an intelligent app to decide that for you. 
+                            <br>
+                            Uses Google Cloud's advanced image recognition technology to determine if an image contains bread.
+                        </p>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="project">
+                        <img src="static/projects/minepi.png" alt="MinePi" class="project__img">
+                        <h2><a href="https://devpost.com/software/minepi">MinePi</a></h2>
+                        <p>
+                            A mod to let you control your Raspberry pi from Minecraft.
+                            <br>
+                            Runner-Up for best hardware hack in 2020.
+                        </p>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="project">
+                        <img src="static/projects/edna.png" alt="Edna" class="project__img">
+                        <h2><a href="https://devpost.com/software/edna-a-writing-chat-bot">Edna</a></h2>
+                        <p>
+                            A mod to let you control your Raspberry pi from Minecraft.
+                            <br>
+                            Runner-Up for best hardware hack in 2020.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i aria-role="img" aria-label="Previous" class="fas fa-chevron-left"></i></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i aria-role="img" aria-label="Next" class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
+
+
+        <!-- <div class="slice slice__top">
+</div>
+
+        <div id="jump-events"></div>
+<div class="events">
+    
+    <h1>Schedule</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <td>Day</td>
+                <td>Time</td>
+                <td>Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saturday</td>
+                <td>12-1pm</td>
+                <td>Opening Ceremony</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1-2pm</td>
+                <td>Something else</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>3-4pm</td>
+                <td>blah blah blah</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>12-1pm</td>
+                <td>Another talk</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>3-4pm</td>
+                <td>An event</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>4-5pm</td>
+                <td>Closing Ceremony</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        <div class="slice slice__bottom">
+</div>
+ -->
+
+        <div id="jump-location"></div>
+        <div class="slice slice__top">
+</div>
+
+<div class="location">
+    <div class="map">
+        <iframe style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Informatics%20Forum&key=AIzaSyBhIxBaDkbSSogpJ9D-zVPLmt64p_M-5I0"></iframe> 
+    </div>
+    <div class="directions">
+        <h1>Where to find us</h1>
+        <p>This year, we'll be at the Informatics Forum, located in the heart of Edinburgh.</p>
+        
+        <h2>By Public Transport</h2>
+        <p>If you're travelling by train, <a href="https://goo.gl/maps/9u4mpBPU26o8vkeF6">Waverely Station</a> is only 10-15 minutes walk away - just head down South Bridge until you get to South College street, then walk down Potterrow.</p>
+        <p>If you're travelling from outside Edinburgh by bus, you'll likely arrive at St. Andrew's Station, and can follow the same route.</p>
+        <p><a href="https://www.ed.ac.uk/transport/travelling-here/central-area/">The university website has more details on how to get to campus.</a></p>
+
+        <h2>By Car</h2>
+        <p>The nearest car park is <a href="https://goo.gl/maps/APauafXWt8rbCjgA6">Q-Park Quartermile</a>, about 2 minutes walk away. You can also park on <a href="https://goo.gl/maps/Cg2hAtWwVghZp1bZ6">Holyrood Road</a>, or on <a href="https://goo.gl/maps/mPVuZJiF41uQNBKs9">Castle Terrace</a></p>
+    </div>
+
+    <div class="online">
+        <!-- TODO: Stuff for online attendees? If we're streaming things, etc. -->
+    </div>
+</div>
+<div class="slice slice__bottom">
+</div>
+
+<div class="slice slice__top">
+</div>
+
+<div class="reimbursements">
+    <h1>Travel Reimbursements</h1>
+    <p>If you are arriving from outside of Edinburgh, we may able to reimburse your travel. Please not that reimbursements are not guaranteed.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Region</td>
+                <td>Amount</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Scotland (excl Edinburgh)</td>
+                <td>up to £20</td>
+            </tr>
+            <tr>
+                <td>Northern England & Midlands</td>
+                <td>up to £40</td>
+            </tr>
+            <tr>
+                <td>Southern England and EU</td>
+                <td>up to £50</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="slice slice__bottom">
+</div>
+
+
+
+        <div id="jump-sponsors"></div>
+<div class="sponsors">
+    <div class="platinum">
+        <h1>Platinum</h1>
+        <div class="items">
+            <a href="//blackrock.com" target="_blank" rel="nofollow">
+                <img src="/static/partners/blackrock.png" alt="blackrock logo">
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="gold">
+        <h1>Gold</h1>
+        <div class="items">
+            <a href="//optiver.com" target="_blank" rel="nofollow">
+                <img src="/static/partners/optiver.png" alt="optiver logo">
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="silver">
+        <h1>Silver</h1>
+        <div class="items">
+            <a href="//www.gresearch.co.uk/" target="_blank" rel="nofollow" class="silver__gresearch">
+                <img src="/static/partners/gresearch.svg" alt="g research logo">
+            </a>
+            <a href="//thoughtmachine.net/" target="_blank" rel="nofollow">
+                <img src="/static/partners/thoughtmachine.png" alt="thought machine logo">
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="bronze">
+        <h1>Bronze</h1>
+        <div class="items">
+            <a href="//craneware.com" target="_blank" rel="nofollow">
+                <img src="/static/partners/craneware.svg" alt="craneware logo">
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="partner">
+        <h1>Partners</h1>
+        <div class="items">
+            <a href="//hackathons.org.uk/" target="_blank" rel="nofollow" class="hackuk">
+                <img src="/static/partners/hackuk.svg" alt="hackuk logo">
+            </a>
+            <a href="//hackp.ac/mlh-stickermule-hackathons" target="_blank" rel="nofollow">
+                <img src="/static/partners/stickermule.png" class="partner__stickermule" alt="stickermule logo">
+            </a>
+            <a href="//comp-soc.com" target="_blank" rel="nofollow">
+                <img src="/static/logos/compsoc-logo.png" alt="compsoc logo">
+            </a>
+        </div>
+    </div>
+</div>
+
+        
+<div class="footer">
+	<div class="footer-left">
+		<a href="//comp-soc.com">CompSoc Edinburgh <span class="heart">&hearts;</span> You!</a>
+	</div>
+	<div class="footer-right">
+		<a href="//2015.hacktheburgh.com">2015</a> | 
+		<a href="//2016.hacktheburgh.com">2016</a> | 
+		<a href="//2017.hacktheburgh.com">2017</a> | 
+		<a href="//2018.hacktheburgh.com">2018</a> | 
+		<a href="//2019.hacktheburgh.com">2019</a> | 
+		<a href="//2020.hacktheburgh.com">2020</a> | 
+		<a href="//mlh.io/code-of-conduct">Code of Conduct</a>
+	</div>
+</div>
+
+        <script src="lib/common.mjs" type="module" defer></script>
+<script src="https://kit.fontawesome.com/b9941810ed.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js" integrity="sha256-CnNQJd80jPuIDyeQRRq7+Wgt+++Kl0dZLt4ETNmxMIw=" crossorigin="anonymous"></script>
+        
+        <script src="lib/index.min.js" defer></script>
+        
+        <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/2021/events?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=black" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-black.svg" alt="Major League Hacking 2021 Hackathon Season" style="width:100%"></a>
+
+    </body>
+</html>
