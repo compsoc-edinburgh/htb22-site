@@ -9,7 +9,7 @@
     }
 
     margin: 20vh 0;
-    padding: 5rem 0;
+    padding: 3rem 0;
     text-align: center;
 
     >h1 {
@@ -23,6 +23,11 @@
         img {
             width: 100%;
         }
+
+        a {
+            color: white !important;
+        }
+
         width: 65%;
         margin: 0 auto;
     }
