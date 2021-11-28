@@ -30,7 +30,11 @@
 
         {% include footer.html %}
         {% include scripts.html %}
-        <script src="lib/index.mjs" type="module"></script>
+        {% if jekyll.environment == "production" %}
+        <script src="lib/index.min.js" defer></script>
+        {% else %}
+        <script src="lib/index.mjs" defer type="module"></script>
+        {% endif %}
         {% include mlh.html %}
     </body>
 </html>
