@@ -1,13 +1,21 @@
 .numbers {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    background: $primary-darker;
 
-    justify-self: center;
+    padding: 3rem 0;
+
+    grid-template-columns: auto;
+    row-gap: 5rem;
 
     @include media-desktop {
-        justify-self: end;
+        grid-template-columns: auto auto auto;
+        column-gap: 5rem;
+        padding: 3rem 10%;
     }
+
+
+    justify-content: space-around;
+    justify-self: center;
 
     .number-container {
         display: grid;
@@ -15,12 +23,6 @@
         grid-template-columns: auto;
         justify-content: center;
 
-        @include media-desktop {
-            grid-template-columns: auto auto;
-            justify-content: end;
-        }
-
-        grid-column-gap: 2rem;
         align-items: center;
 
         .number {
@@ -34,7 +36,6 @@
 
             @include media-desktop {
                 font-size: 9.5vw;
-                justify-self: end;
             }
         }
 
@@ -48,7 +49,6 @@
 
             @include media-desktop {
                 font-size: 4.5vw;
-                justify-self: start;
             }
         }
     }
