@@ -34,7 +34,7 @@ jobs:
         run: |
           sudo chown -R $USER build/
           sudo chmod -R 755 build/
-          "npx rollup lib/index.mjs --format iife --file build/lib/index.min.js -p rollup-plugin-terser"
+          npm run rollupProduction
       #- name: Add CNAME file
       #  run: echo "2021.hacktheburgh.com" > build/CNAME
       - name: Deploy
