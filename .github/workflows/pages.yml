@@ -14,7 +14,7 @@ jobs:
       - name: Install Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.7.x'
+          ruby-version: '2.7.0'
       - name: Cache Ruby dependencies
         uses: actions/cache@v2
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: JEKYLL_ENV=production jekyll build
+        run: JEKYLL_ENV=production ./vendor/bundle/ruby/2.7.0/bin/jekyll build
       - name: Rollup
         run: "./node_modules/.bin/rollup lib/index.mjs --format iife --file _site/lib/index.min.js -p rollup-plugin-terser"
       #- name: Add CNAME file
