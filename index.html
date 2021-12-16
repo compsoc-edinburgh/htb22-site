@@ -19,14 +19,18 @@
 
         {% include projects.html %}
 
-        <!-- {% include components/slice_top.html %}
+        {% comment %}
+        {% include components/slice_top.html %}
         {% include events.html %}
-        {% include components/slice_bottom.html %} -->
+        {% include components/slice_bottom.html %}
+        {% endcomment %}
 
         <div id="jump-location"></div>
         {% include location.html %}
 
-        <!-- {% include sponsors.html %} -->
+        {% comment %}
+        {% include sponsors.html %}
+        {% endcomment %}
 
         {% include footer.html %}
         {% include scripts.html %}
@@ -35,6 +39,9 @@
         {% else %}
         <script src="lib/index.mjs" defer type="module"></script>
         {% endif %}
-        <!-- {% include mlh.html %} -->
+
+        {% comment %}
+        {% include mlh.html %}
+        {% endcomment %}
     </body>
 </html>
