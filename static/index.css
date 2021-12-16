@@ -139,8 +139,10 @@ a:hover {
     text-align: center;
     margin: 0;
     padding: 0 10%;
-    padding-top: 3rem;
-    padding-bottom: 5rem; }
+    padding-top: 3rem; }
+    @media (min-width: 769px) {
+      .faq .explanation {
+        padding-bottom: 5rem; } }
 
 .faq__layout {
   padding: 5rem 0;
