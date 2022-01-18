@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style type="text/css" media="screen">
+         body {
+             background: #222;
+             font-family: 'Roboto', sans-serif;
+         }
+         header {
+             text-align: center;
+             margin-bottom: 2rem;
+         }
+         header img {
+             filter: drop-shadow(0px 0px 10px black);
+             height: 15rem;
+         }
+
+         main {
+             background: white;
+             margin: 0 auto;
+             border-radius: 2rem 2rem;
+             color: black;
+             padding: 3rem;
+             margin-bottom: 1rem;
+         }
+         @media screen and (min-width: 768px) {
+             main {
+                 width: 70%;
+             }
+         }
+
+         footer {
+             text-align: center;
+         }
+         footer a {
+             margin: 0 2rem;
+             color: rgba(255, 255, 255, 0.7);
+             text-decoration: none;
+         }
+         a {
+             color: #0F7DB0;
+             text-decoration: none;
+         }
+         a:visited {
+             color: #0F7DB0 !important;
+         }
+         a.button {
+             display: block;
+             width: 30%;
+             margin: 0 auto;
+             text-align: center;
+             text-transform: uppercase;
+             font-weight: bold;
+             background: #2BBAFD;
+             color: white;
+             padding: 1rem;
+             border-radius: 2rem;
+         }
+         a.button:visited {
+             color: white !important;
+         }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://2022.hacktheburgh.com/static/logos/index_nav.png" alt="Hack the Burgh 2022" />
+        </header>
+        <main>
+            <h1>Heading</h1>
+            <p>Some text</p>
+            <a href="#">A small link</a>
+            <a href="#" class="button">a big button</a>
+        </main>
+        <footer>
+            <a href="#">Web version</a>
+            <a href="#">Stop emailing me</a>
+        </footer>
+    </body>
+</html>
