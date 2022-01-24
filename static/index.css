@@ -214,7 +214,7 @@ a:hover {
     grid-column-gap: 3rem; }
 
   .gold .items {
-    grid-template-columns: 25% !important;
+    grid-template-columns: 25% 25% !important;
     grid-column-gap: 3rem; }
 
   .silver .items {
